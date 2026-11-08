@@ -1,0 +1,28 @@
+{
+    "_comment": "Single geometry source for SUMO vTypes (build_sumo_city.py) and rendered models (CityLife / EmergencyFleetPresenter). length/width are metres; Godot normalizes each model to exactly these dimensions and renders its centre at SUMO's body centre.",
+    "classes": {
+        "car": {"length": 4.7, "width": 2.1, "fit": "uniform"},
+        "taxi": {"length": 4.7, "width": 2.1, "fit": "uniform", "model": "res://assets/kenney/car_kit/taxi.glb"},
+        "bus": {"length": 9.0, "width": 2.8, "fit": "uniform"},
+        "police": {"length": 4.9, "width": 2.2, "fit": "stretch", "model": "res://assets/poly_pizza/city_props/Police Car.glb"},
+        "ambulance": {"length": 6.0, "width": 2.6, "fit": "stretch", "model": "res://assets/kenney/car_kit/ambulance.glb"},
+        "fire": {"length": 7.6, "width": 2.8, "fit": "stretch", "model": "res://assets/kenney/car_kit/firetruck.glb"},
+        "tow": {"length": 7.4, "width": 2.7, "fit": "stretch", "model": "res://assets/kenney/car_kit/truck-flat.glb"},
+        "utility": {"length": 6.2, "width": 2.6, "fit": "stretch", "model": "res://assets/kenney/car_kit/truck.glb"},
+        "garbage": {"length": 8.6, "width": 2.6, "fit": "stretch", "model": "res://assets/kenney/car_kit/truck.glb"}
+    },
+    "sumo_type_class": {
+        "car": "car",
+        "taxi": "taxi",
+        "bus": "bus",
+        "police": "police",
+        "police_response": "police",
+        "ambulance": "ambulance",
+        "ambulance_response": "ambulance",
+        "fire": "fire",
+        "fire_response": "fire",
+        "tow": "tow",
+        "utility": "utility",
+        "garbage": "garbage"
+    }
+}

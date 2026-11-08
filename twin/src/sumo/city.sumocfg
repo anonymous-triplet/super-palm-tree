@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="city.net.xml"/>
+        <route-files value="city.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="86400"/>
+        <step-length value="0.1"/>
+    </time>
+    <processing>
+        <!-- Every vehicle is rendered: a teleport would be a visible jump. The
+             bridge watchdog resolves genuine gridlock with legal reroutes. -->
+        <time-to-teleport value="-1"/>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+    </processing>
+    <routing>
+        <device.rerouting.probability value="0.12"/>
+        <device.rerouting.period value="45"/>
+        <device.rerouting.adaptation-steps value="60"/>
+    </routing>
+    <report>
+        <verbose value="false"/>
+        <no-step-log value="true"/>
+        <duration-log.disable value="true"/>
+    </report>
+</configuration>

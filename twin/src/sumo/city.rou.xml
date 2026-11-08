@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="car" vClass="passenger" carFollowModel="Krauss" accel="2.6" decel="4.5" emergencyDecel="8.5" sigma="0.16" tau="1.1" length="4.7" width="2.1" minGap="2.5" maxSpeed="15.5" speedFactor="normc(1.0,0.10)" lcStrategic="1.0" lcOpposite="0.0"/>
+    <vType id="taxi" vClass="taxi" color="1,0.72,0.05" accel="2.4" decel="4.5" emergencyDecel="8.5" sigma="0.12" tau="1.1" length="4.7" width="2.1" minGap="2.3" maxSpeed="14.5" lcOpposite="0.0"/>
+    <vType id="bus" vClass="bus" color="0.15,0.45,0.95" accel="1.4" decel="3.2" emergencyDecel="7.0" sigma="0.08" tau="1.2" length="9.0" width="2.8" minGap="3.0" maxSpeed="12.0" lcOpposite="0.0"/>
+    <vType id="police" vClass="emergency" accel="3.0" decel="5.0" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="4.9" width="2.2" minGap="2.0" maxSpeed="19.0" lcStrategic="1.0" speedFactor="1.0" lcOpposite="0.0"/>
+    <vType id="police_response" vClass="emergency" accel="3.0" decel="5.0" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="4.9" width="2.2" minGap="2.0" maxSpeed="19.0" lcStrategic="1.0" speedFactor="1.3" lcOpposite="0.0" jmDriveAfterRedTime="1000" jmDriveRedSpeed="5.5"/>
+    <vType id="ambulance" vClass="emergency" accel="2.4" decel="4.8" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="6.0" width="2.6" minGap="2.0" maxSpeed="17.0" lcStrategic="1.0" speedFactor="1.0" lcOpposite="0.0"/>
+    <vType id="ambulance_response" vClass="emergency" accel="2.4" decel="4.8" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="6.0" width="2.6" minGap="2.0" maxSpeed="17.0" lcStrategic="1.0" speedFactor="1.3" lcOpposite="0.0" jmDriveAfterRedTime="1000" jmDriveRedSpeed="5.5"/>
+    <vType id="fire" vClass="emergency" accel="1.9" decel="4.2" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="7.6" width="2.8" minGap="2.0" maxSpeed="16.0" lcStrategic="1.0" speedFactor="1.0" lcOpposite="0.0"/>
+    <vType id="fire_response" vClass="emergency" accel="1.9" decel="4.2" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="7.6" width="2.8" minGap="2.0" maxSpeed="16.0" lcStrategic="1.0" speedFactor="1.3" lcOpposite="0.0" jmDriveAfterRedTime="1000" jmDriveRedSpeed="5.5"/>
+    <vType id="tow" vClass="delivery" accel="1.8" decel="4.2" emergencyDecel="8.0" sigma="0.08" tau="1.0" length="7.4" width="2.7" minGap="2.2" maxSpeed="14.0" speedFactor="1.0" lcStrategic="1.0" lcOpposite="0.0"/>
+    <vType id="tow_response" vClass="delivery" accel="2.6" decel="4.8" emergencyDecel="9.0" sigma="0.06" tau="0.9" length="7.4" width="2.7" minGap="2.0" maxSpeed="17.0" lcStrategic="1.0" speedFactor="1.3" lcOpposite="0.0" jmDriveAfterRedTime="1000" jmDriveRedSpeed="5.5"/>
+    <vType id="utility" vClass="delivery" accel="1.8" decel="4.2" emergencyDecel="8.0" sigma="0.08" tau="1.0" length="6.2" width="2.6" minGap="2.2" maxSpeed="14.0" speedFactor="1.0" lcStrategic="1.0" lcOpposite="0.0"/>
+    <vType id="garbage" vClass="delivery" accel="1.4" decel="4.2" emergencyDecel="8.0" sigma="0.08" tau="1.0" length="8.6" width="2.6" minGap="2.2" maxSpeed="12.0" speedFactor="1.0" lcStrategic="1.0" lcOpposite="0.0"/>
+    <trip id="civ_000" type="car" depart="0.0" from="E_r1c4_r2c4" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_001" type="car" depart="0.8" from="E_r9c7_r8c7" to="E_r5c2_r5c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_002" type="car" depart="1.7" from="E_r6c1_r6c2" to="E_r3c8_r3c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_003" type="car" depart="2.5" from="E_r6c1_r6c2" to="E_r3c8_r3c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_004" type="taxi" depart="3.4" from="E_r9c7_r8c7" to="E_r5c2_r5c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_005" type="car" depart="4.2" from="E_r2c9_r2c8" to="E_r7c2_r7c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_006" type="taxi" depart="5.1" from="E_r9c5_r8c5" to="E_r2c3_r1c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_007" type="car" depart="6.0" from="E_r1c8_r2c8" to="E_r7c2_r7c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_008" type="car" depart="6.8" from="E_r1c7_r2c7" to="E_r8c2_r8c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_009" type="car" depart="7.6" from="E_r8c1_r8c2" to="E_r2c5_r1c5" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_010" type="taxi" depart="8.5" from="E_r7c9_r7c8" to="E_r2c2_r2c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_011" type="car" depart="9.3" from="E_r1c5_r2c5" to="E_r7c8_r7c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_012" type="car" depart="10.2" from="E_r4c1_r4c2" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_013" type="car" depart="11.0" from="E_r3c1_r3c2" to="E_r7c8_r7c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_014" type="car" depart="11.9" from="E_r3c1_r3c2" to="E_r8c5_r9c5" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_015" type="car" depart="12.8" from="E_r9c4_r8c4" to="E_r2c2_r1c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_016" type="car" depart="13.6" from="E_r4c9_r4c8" to="E_r8c3_r9c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_017" type="car" depart="14.4" from="E_r3c1_r3c2" to="E_r8c7_r9c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_018" type="car" depart="15.3" from="E_r9c5_r8c5" to="E_r2c3_r1c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_019" type="car" depart="16.1" from="E_r1c3_r2c3" to="E_r8c8_r8c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_020" type="car" depart="17.0" from="E_r9c8_r8c8" to="E_r2c4_r1c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_021" type="car" depart="17.8" from="E_r1c6_r2c6" to="E_r8c2_r9c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_022" type="car" depart="18.7" from="E_r9c5_r8c5" to="E_r2c3_r1c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_023" type="taxi" depart="19.6" from="E_r1c6_r2c6" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_024" type="taxi" depart="20.4" from="E_r4c1_r4c2" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_025" type="taxi" depart="21.2" from="E_r9c4_r8c4" to="E_r4c8_r4c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_026" type="car" depart="22.1" from="E_r5c1_r5c2" to="E_r2c7_r1c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_027" type="car" depart="22.9" from="E_r3c1_r3c2" to="E_r5c8_r5c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_028" type="car" depart="23.8" from="E_r1c3_r2c3" to="E_r7c8_r7c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_029" type="car" depart="24.6" from="E_r9c5_r8c5" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_030" type="taxi" depart="25.5" from="E_r5c1_r5c2" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_031" type="car" depart="26.3" from="E_r5c9_r5c8" to="E_r7c2_r7c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_032" type="taxi" depart="27.2" from="E_r1c7_r2c7" to="E_r8c2_r8c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_033" type="taxi" depart="28.1" from="E_r1c4_r2c4" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_034" type="taxi" depart="28.9" from="E_r9c8_r8c8" to="E_r5c2_r5c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_035" type="car" depart="29.8" from="E_r2c9_r2c8" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_036" type="car" depart="30.6" from="E_r7c9_r7c8" to="E_r2c2_r1c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_037" type="car" depart="31.4" from="E_r4c1_r4c2" to="E_r8c7_r9c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_038" type="taxi" depart="32.3" from="E_r9c5_r8c5" to="E_r2c8_r1c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_039" type="taxi" depart="33.1" from="E_r1c5_r2c5" to="E_r7c2_r7c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_040" type="car" depart="34.0" from="E_r1c2_r2c2" to="E_r4c8_r4c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_041" type="car" depart="34.9" from="E_r9c4_r8c4" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_042" type="taxi" depart="35.7" from="E_r5c9_r5c8" to="E_r8c3_r9c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_043" type="car" depart="36.5" from="E_r2c1_r2c2" to="E_r8c7_r9c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_044" type="car" depart="37.4" from="E_r1c5_r2c5" to="E_r8c8_r8c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_045" type="bus" depart="38.2" from="E_r7c1_r7c2" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_046" type="car" depart="39.1" from="E_r1c6_r2c6" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_047" type="car" depart="39.9" from="E_r9c6_r8c6" to="E_r2c2_r1c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_048" type="car" depart="40.8" from="E_r1c4_r2c4" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_049" type="car" depart="41.6" from="E_r9c2_r8c2" to="E_r5c8_r5c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_050" type="car" depart="42.5" from="E_r1c6_r2c6" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_051" type="taxi" depart="43.4" from="E_r7c9_r7c8" to="E_r5c2_r5c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_052" type="car" depart="44.2" from="E_r3c1_r3c2" to="E_r6c8_r6c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_053" type="taxi" depart="45.0" from="E_r8c1_r8c2" to="E_r4c8_r4c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_054" type="bus" depart="45.9" from="E_r8c1_r8c2" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_055" type="bus" depart="46.8" from="E_r3c1_r3c2" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_056" type="car" depart="47.6" from="E_r1c2_r2c2" to="E_r8c8_r8c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_057" type="car" depart="48.4" from="E_r1c5_r2c5" to="E_r7c8_r7c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_058" type="car" depart="49.3" from="E_r2c9_r2c8" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_059" type="taxi" depart="50.1" from="E_r8c1_r8c2" to="E_r2c5_r1c5" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_060" type="taxi" depart="51.0" from="E_r6c9_r6c8" to="E_r2c2_r2c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_061" type="car" depart="51.9" from="E_r4c1_r4c2" to="E_r6c8_r6c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_062" type="car" depart="52.7" from="E_r1c3_r2c3" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_063" type="car" depart="53.5" from="E_r8c9_r8c8" to="E_r2c5_r1c5" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_064" type="car" depart="54.4" from="E_r7c1_r7c2" to="E_r2c8_r1c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_065" type="car" depart="55.2" from="E_r1c5_r2c5" to="E_r8c2_r9c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_066" type="taxi" depart="56.1" from="E_r3c1_r3c2" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_067" type="taxi" depart="56.9" from="E_r7c1_r7c2" to="E_r2c6_r1c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_068" type="car" depart="57.8" from="E_r7c1_r7c2" to="E_r2c7_r1c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_069" type="taxi" depart="58.6" from="E_r9c4_r8c4" to="E_r2c6_r1c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_070" type="car" depart="59.5" from="E_r2c9_r2c8" to="E_r8c4_r9c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_071" type="taxi" depart="60.4" from="E_r5c1_r5c2" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_072" type="car" depart="61.2" from="E_r5c9_r5c8" to="E_r2c2_r2c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_073" type="car" depart="62.0" from="E_r8c1_r8c2" to="E_r3c8_r3c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_074" type="taxi" depart="62.9" from="E_r1c3_r2c3" to="E_r7c8_r7c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_075" type="taxi" depart="63.8" from="E_r9c8_r8c8" to="E_r2c2_r2c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_076" type="car" depart="64.6" from="E_r6c9_r6c8" to="E_r2c4_r1c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_077" type="taxi" depart="65.5" from="E_r9c4_r8c4" to="E_r2c2_r2c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_078" type="car" depart="66.3" from="E_r9c7_r8c7" to="E_r2c4_r1c4" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_079" type="car" depart="67.1" from="E_r2c9_r2c8" to="E_r4c2_r4c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_080" type="car" depart="68.0" from="E_r8c1_r8c2" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_081" type="car" depart="68.8" from="E_r1c4_r2c4" to="E_r8c7_r9c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_082" type="car" depart="69.7" from="E_r4c1_r4c2" to="E_r6c8_r6c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_083" type="car" depart="70.5" from="E_r7c9_r7c8" to="E_r4c2_r4c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_084" type="bus" depart="71.4" from="E_r1c3_r2c3" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_085" type="car" depart="72.2" from="E_r3c1_r3c2" to="E_r8c8_r8c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_086" type="car" depart="73.1" from="E_r3c9_r3c8" to="E_r7c2_r7c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_087" type="car" depart="74.0" from="E_r1c4_r2c4" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_088" type="car" depart="74.8" from="E_r5c1_r5c2" to="E_r2c8_r2c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_089" type="car" depart="75.6" from="E_r8c9_r8c8" to="E_r6c2_r6c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_090" type="car" depart="76.5" from="E_r9c3_r8c3" to="E_r2c8_r1c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_091" type="car" depart="77.3" from="E_r1c7_r2c7" to="E_r8c5_r9c5" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_092" type="taxi" depart="78.2" from="E_r1c8_r2c8" to="E_r8c6_r9c6" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_093" type="taxi" depart="79.0" from="E_r6c9_r6c8" to="E_r2c3_r1c3" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_094" type="taxi" depart="79.9" from="E_r1c7_r2c7" to="E_r8c2_r9c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_095" type="car" depart="80.8" from="E_r1c4_r2c4" to="E_r8c8_r9c8" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_096" type="car" depart="81.6" from="E_r5c9_r5c8" to="E_r8c2_r9c2" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_097" type="bus" depart="82.5" from="E_r1c2_r2c2" to="E_r6c8_r6c9" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_098" type="taxi" depart="83.3" from="E_r8c9_r8c8" to="E_r5c2_r5c1" departLane="best" departSpeed="max" arrivalLane="current"/>
+    <trip id="civ_099" type="taxi" depart="84.1" from="E_r3c1_r3c2" to="E_r8c7_r9c7" departLane="best" departSpeed="max" arrivalLane="current"/>
+</routes>

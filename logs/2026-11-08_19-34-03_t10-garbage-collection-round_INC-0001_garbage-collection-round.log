@@ -1,0 +1,46 @@
+City Ground Zero · Digital Twin run log
+Run:     T10 Garbage collection round · INC-0001 (Garbage collection round)
+Started: 2026-11-08 19:34:03 (local time, UTC+01:00)
+Layers:  Twin 'city-twin' at https://127.0.0.1:8740/mcp · Brain 'city-brain' at https://127.0.0.1:8741/mcp (stand-in) · Guardian 'guardian' at https://127.0.0.1:8742/mcp (stand-in)
+Links:   MCP /mcp (Streamable HTTP) over mutually authenticated TLS 1.3+, configured in twin.conf
+Each line: time · who → whom · what happened. Indented '↳' lines carry the details and payload;
+show the lines alone with: python3 twin/src/tools/mcp/runlog.py <this file>
+----------------------------------------------------------------------------------------------------------------------
+19:34:03.180  OPERATOR → TWIN     Scenario T10 Garbage collection round: every system steady for 1 s, starting now
+19:34:03.223  OPERATOR → TWIN     Trigger garbage collection (T10 Garbage collection round)
+              ↳ {"tool":"trigger_incident","arguments":{"kind":"garbage_collection","label":"T10 Garbage collection round"},"_meta":{"label":"T10 Garbage collection round"}}
+19:34:03.262  TWIN → OPERATOR     Incident requested (incident garbage_collection requested)
+              ↳ {"source":"city_ground_zero","tool":"trigger_incident","timestamp":"2026-11-08T18:34:03.262Z","applied":"incident garbage_collection requested","id":"INCIDENTS","request":"g13207-3"}
+19:34:03.484  TWIN                Opened the run log for INC-0001 (garbage collection round, T10 Garbage collection round): 2026-11-08_19-34-03_t10-garbage-collection-round_INC-0001_garbage-collection-round.log
+19:34:03.484  TWIN                INC-0001: Garbage collection round reported
+              ↳ {"sim_time_s":124.5,"phase":"responding","location":{"bin":"BIN-36","edge":"E_r6c8_r7c8","pos":38.0,"x":291.65,"z":141.5}}
+19:34:03.484  TWIN                INC-0001: Collection round of 3 containers: BIN-36, BIN-42, BIN-41
+              ↳ {"sim_time_s":124.6,"phase":"responding","location":{"bin":"BIN-36","edge":"E_r6c8_r7c8","pos":38.0,"x":291.65,"z":141.5}}
+19:34:03.484  TWIN                INC-0001: GRB-1 dispatched (collection)
+              ↳ {"sim_time_s":124.6,"phase":"responding","location":{"bin":"BIN-36","edge":"E_r6c8_r7c8","pos":38.0,"x":291.65,"z":141.5}}
+19:34:03.485  TWIN → BRAIN        Reported INC-0001: garbage collection round under way with GRB-1 (scheduled, no call to answer)
+              ↳ {"tool":"report_incident","arguments":{"incident":{"id":"INC-0001","kind":"garbage_collection","title":"Garbage collection round","category":"service","severity":"minor","phase":"responding","location":{"bin":"BIN-36","edge":"E_r6c8_r7c8","pos":38.0,"x":291.65,"z":141.5},"point":{"x":291.65,"z":141.5},"participants":[],"injuries":[],"callers":0,"units":[{"kind":"garbage","role":"collection","status":"mobilizing","unit":"GRB-1"}],"label":"T10 Garbage collection round","block":"L.4"},"requests":[]},"_meta":{"correlationId":"INC-0001"}}
+19:34:03.486  BRAIN → TWIN        Acknowledged INC-0001: noted; nothing to decide (no emergency call)
+              ↳ {"source":"city-brain-standin","timestamp":"2026-11-08T18:34:03.485+00:00","accepted":true,"case":"CASE-INC-0001","note":"noted; nothing to decide (no emergency call)"}
+19:34:03.856  OPERATOR → TWIN     Called control_incident {"id":"INC-0001","action":"watch"}
+              ↳ {"tool":"control_incident","arguments":{"id":"INC-0001","action":"watch"},"_meta":{"correlationId":"INC-0001"}}
+19:34:03.858  TWIN → OPERATOR     Done: viewport watching INC-0001
+              ↳ {"source":"city_ground_zero","tool":"control_incident","timestamp":"2026-11-08T18:34:03.858Z","applied":"viewport watching INC-0001","id":"INCIDENTS","ui":{"camera_status":"One direct viewport camera active","city_camera_active":true,"focus_view":false,"highlight":"","highlight_kinds":["water_network","power_network","traffic_detectors","air_quality","noise","weather","flood","utility_telemetry","traffic_cameras","traffic_signals","water_valves","power_switches","street_lights","irrigation","power_meters","water_meters","hospitals","police_stations","police_vehicles","ambulances","smoky_vehicles","emergency_stations","fire_engines","tow_trucks","utility_vans","seismic_sensors","factories","parking_lots","bin_weights","garbage_bins","refuse_trucks"],"replay":{"camera_mode":"orbit","duration":0.0,"paused":false,"playing":false,"speed":0.5,"time":0.0}}}
+19:35:12.111  TWIN                INC-0001: GRB-1 stopped at BIN-36; crew collecting
+              ↳ {"sim_time_s":193.6,"phase":"working","location":{"bin":"BIN-36","edge":"E_r6c8_r7c8","pos":38.0,"x":291.65,"z":141.5}}
+19:35:42.090  TWIN                INC-0001: GRB-1 moving on to BIN-42
+              ↳ {"sim_time_s":223.6,"phase":"responding","location":{"bin":"BIN-42","edge":"E_r7c8_r8c8","pos":38.0,"x":291.65,"z":236.5}}
+19:36:21.609  TWIN                INC-0001: GRB-1 stopped at BIN-42; crew collecting
+              ↳ {"sim_time_s":263.4,"phase":"working","location":{"bin":"BIN-42","edge":"E_r7c8_r8c8","pos":38.0,"x":291.65,"z":236.5}}
+19:36:51.868  TWIN                INC-0001: GRB-1 moving on to BIN-41
+              ↳ {"sim_time_s":293.8,"phase":"responding","location":{"bin":"BIN-41","edge":"E_r7c7_r7c8","pos":24.0,"x":222.5,"z":183.35}}
+19:37:52.802  TWIN                INC-0001: GRB-1 stopped at BIN-41; crew collecting
+              ↳ {"sim_time_s":355.1,"phase":"working","location":{"bin":"BIN-41","edge":"E_r7c7_r7c8","pos":24.0,"x":222.5,"z":183.35}}
+19:38:23.259  TWIN                INC-0001: Round complete: 3 containers emptied; GRB-1 returning to the depot
+              ↳ {"sim_time_s":385.6}
+19:38:23.259  TWIN                INC-0001 closed: every unit released, the road is open
+              ↳ {"callers":{},"calls":[],"category":"service","created":124.5,"dispatch_requests":[],"id":"INC-0001","impact":null,"kind":"garbage_collection","label":"T10 Garbage collection round","location":{"bin":"BIN-41","edge":"E_r7c7_r7c8","pos":24.0,"x":222.5,"z":183.35},"participants":[],"phase":"resolved","resolved_at":385.6,"scene":{"collection":{"bin":"BIN-41","collected":["BIN-36","BIN-42","BIN-41"],"route":["BIN-36","BIN-42","BIN-41"],"stop":2.0}},"severity":"minor","timeline":[{"t":124.5,"text":"Garbage collection round reported"},{"t":124.6,"text":"Collection round of 3 containers: BIN-36, BIN-42, BIN-41"},{"t":124.6,"text":"GRB-1 dispatched (collection)"},{"t":193.6,"text":"GRB-1 stopped at BIN-36; crew collecting"},{"t":223.6,"text":"GRB-1 moving on to BIN-42"},{"t":263.4,"text":"GRB-1 stopped at BIN-42; crew collecting"},{"t":293.8,"text":"GRB-1 moving on to BIN-41"},{"t":355.1,"text":"GRB-1 stopped at BIN-41; crew collecting"},{"t":385.6,"text":"Round complete: 3 containers emptied; GRB-1 returning to the depot"}],"title":"Garbage collection round","units":[{"kind":"garbage","role":"collection","status":"departing","unit":"GRB-1"}]}
+19:38:23.260  TWIN → BRAIN        INC-0001 is resolved: scene cleared, units GRB-1 released
+              ↳ {"tool":"close_incident","arguments":{"incident":"INC-0001","outcome":"resolved","resolved_at_s":385.6,"units":["GRB-1"]},"_meta":{"correlationId":"INC-0001"}}
+19:38:23.262  BRAIN → TWIN        Closed case INC-0001: 0 dispatch decision(s) on record
+              ↳ {"source":"city-brain-standin","timestamp":"2026-11-08T18:38:23.261+00:00","closed":true,"note":"0 dispatch decision(s) on record"}
